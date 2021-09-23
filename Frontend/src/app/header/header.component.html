@@ -1,0 +1,11 @@
+<div class="header">
+    <a href="#default" class="logo">BookBar</a>
+    <div class="header-right">
+      <a routerLink="/books">Books</a>
+      <a routerLink="/add" *ngIf="_auth.loggedIn()">Add Book</a>
+      <a routerLink="/authors">Authors</a>
+      <a routerLink="/addauthor" *ngIf="_auth.loggedIn()">Add Author</a>
+      <a routerLink="/login" *ngIf="!_auth.loggedIn()" routerLinkActive="active" onclick="document.getElementById('id01').style.display='block'">Login</a>
+      <a routerLink="/books" *ngIf="_auth.loggedIn()" (click)="logoutUser()">Logout</a>
+    </div>
+  </div>

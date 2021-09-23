@@ -1,0 +1,20 @@
+<div class="heading">
+  <h1>Books</h1>
+</div>
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor='let book of books'>
+    <ul><img mat-card-image 
+    [src] = 'book.imageUrl'
+    [style.height.px] = 'imageHeight'
+    [style.width.px] = 'imageWidth'
+    [style.margin.px] = 'imageMargin'></ul>
+    <mat-list role="list">
+    <ul>{{ book.bookName }}</ul>
+    <ul>{{ book.bookAuthor }}</ul>
+    <ul>{{ book.bookGenre }}</ul>
+    <ul><button mat-button class="edit" (click)="editBook(book)" style="background-color: #1E90FF;" *ngIf="_auth.loggedIn()">Edit</button></ul>
+    <ul><button mat-button class="dlt" (click)="deleteBook(book)" style="background-color: #FF0000;" *ngIf="_auth.loggedIn()">Delete</button></ul>
+    </mat-list>
+  </mat-grid-tile>
+</mat-grid-list>

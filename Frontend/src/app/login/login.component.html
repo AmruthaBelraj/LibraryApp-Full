@@ -1,0 +1,44 @@
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Login">&times;</span>
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" (ngSubmit)="loginUser()">
+    <div class="login">
+      <h1>Login</h1>
+    </div><br>
+
+    <div class="container">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Enter Username" name="uname" [(ngModel)]="user.uname" required><br>
+
+      <i class="fas fa-key"></i>
+      <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="user.password" required>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button><br>
+
+      <button type="submit" class="loginbutton">Login</button><br>
+        <label for="checkid"  style="word-wrap:break-word">Remember Me
+          <input id="checkid"  type="checkbox" value="remember" />
+        </label>
+    </div>
+
+    <div class="container">
+      <span class="psw"><a href="#">Forgot Password?</a></span><br>
+    </div>
+  </form>
+</div>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>

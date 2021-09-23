@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,400;1,600&display=swap');
+
+div h1 {
+    text-align: center;
+    font-family: 'Patua One', cursive;
+    margin-top: 25px;
+  }
+
+  mat-list {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: large;
+    font-weight: bolder;
+  }
+
+  .edit {
+    border: 2px solid black;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+  }
+
+  .dlt {
+    border: 2px solid black;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 5px;
+    color: white;
+  }
+
+ 
